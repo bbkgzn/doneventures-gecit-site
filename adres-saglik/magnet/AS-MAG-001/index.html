@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adres Sağlık'a hızlıca ulaşın</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-border: #dbe4ee;
+      --text: #16324f;
+      --muted: #5d7186;
+      --accent: #0f5c8c;
+      --accent-soft: #eaf4fb;
+      --danger-bg: #fff4f2;
+      --danger-border: #f4c9c2;
+      --danger-text: #8a3124;
+      --shadow: 0 10px 30px rgba(15, 39, 64, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #fbfdff 0%, var(--bg) 100%);
+      color: var(--text);
+    }
+
+    main {
+      width: min(100%, 560px);
+      margin: 0 auto;
+      min-height: 100vh;
+      padding: 24px 16px 40px;
+    }
+
+    .shell {
+      display: grid;
+      gap: 18px;
+    }
+
+    .intro {
+      padding: 12px 4px 0;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: 2rem;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .lead {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .actions {
+      display: grid;
+      gap: 12px;
+    }
+
+    .action-card {
+      display: block;
+      text-decoration: none;
+      background: var(--surface);
+      color: inherit;
+      border: 1px solid var(--surface-border);
+      border-radius: 18px;
+      padding: 18px 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .action-card:focus-visible,
+    .action-card:hover {
+      border-color: #b7cbde;
+      background: #fcfeff;
+      outline: none;
+    }
+
+    .action-title {
+      margin: 0 0 8px;
+      font-size: 1.125rem;
+      line-height: 1.35;
+    }
+
+    .action-text {
+      margin: 0;
+      font-size: 0.975rem;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+
+    .note,
+    .error-box,
+    .anchor-panel {
+      border-radius: 16px;
+      padding: 16px;
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+    }
+
+    .note {
+      background: var(--accent-soft);
+      border-color: #cfe3f2;
+      color: #244866;
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
+    .error-box {
+      background: var(--danger-bg);
+      border-color: var(--danger-border);
+      color: var(--danger-text);
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
+    .anchor-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .anchor-panel h2 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    .anchor-panel p {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+
+    @media (min-width: 640px) {
+      main {
+        padding-top: 40px;
+        padding-bottom: 56px;
+      }
+
+      .action-card {
+        padding: 20px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="shell">
+      <section class="intro" aria-labelledby="page-title">
+        <h1 id="page-title">Adres Sağlık'a hızlıca ulaşın</h1>
+        <p class="lead">Aşağıdaki seçeneklerden ihtiyacınıza uygun olanı seçin.</p>
+      </section>
+
+      <section class="actions" aria-label="Hızlı yönlendirme seçenekleri">
+        <a class="action-card" href="#eczane">
+          <h2 class="action-title">Eczaneye Ulaş</h2>
+          <p class="action-text">Eczanenizle hızlıca iletişime geçin.</p>
+        </a>
+
+        <a class="action-card" href="#ilacim-bitti">
+          <h2 class="action-title">İlacım Bitti</h2>
+          <p class="action-text">Devam eden ihtiyacınızı kısa yoldan iletin.</p>
+        </a>
+
+        <a class="action-card" href="#siparis">
+          <h2 class="action-title">Sipariş / Hazırlık Talebi</h2>
+          <p class="action-text">Hazırlık veya sipariş isteğinizi bırakın.</p>
+        </a>
+      </section>
+
+      <div class="note">
+        Bu alan hızlı yönlendirme içindir. Gerekli durumda eczaneniz sizinle iletişime geçer.
+      </div>
+
+      <div class="error-box" role="status" aria-live="polite">
+        İşlem şu an tamamlanamadı. Lütfen tekrar deneyin veya doğrudan eczanenizle iletişime geçin.
+      </div>
+
+      <section class="anchor-list" aria-label="Yer tutucu hedefler">
+        <div class="anchor-panel" id="eczane">
+          <h2>Eczaneye Ulaş</h2>
+          <p>Bu pilot ekranda yönlendirme hedefi: <strong>#eczane</strong></p>
+        </div>
+
+        <div class="anchor-panel" id="ilacim-bitti">
+          <h2>İlacım Bitti</h2>
+          <p>Bu pilot ekranda yönlendirme hedefi: <strong>#ilacim-bitti</strong></p>
+        </div>
+
+        <div class="anchor-panel" id="siparis">
+          <h2>Sipariş / Hazırlık Talebi</h2>
+          <p>Bu pilot ekranda yönlendirme hedefi: <strong>#siparis</strong></p>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
