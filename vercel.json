@@ -6,7 +6,7 @@
   "outputDirectory": "dist",
   "headers": [
     {
-      "source": "/connect/:path*",
+      "source": "/connect/(.*)",
       "headers": [
         {
           "key": "X-Robots-Tag",
