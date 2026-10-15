@@ -11,6 +11,6 @@ window.DONE_VENTURES = Object.freeze({
   cardTitle: "Founder · Pharmacist, MSc",
   profession: "Pharmacist, MSc · Entrepreneur",
   degree: "MSc in Pharmaceutical Technology",
-  linkedinUrl: "",
+  linkedinUrl: "https://www.linkedin.com/in/babak-g%C3%B6zen-5798b221/",
   connectPhotoUrl: "/connect/bg-7k29/portrait.jpg" // 320 × 320 square crop of the same original
 });
