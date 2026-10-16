@@ -6,6 +6,6 @@ window.DONE_VENTURES = Object.freeze({
   corporatePhoneDisplay: "+90 850 441 42 61",
   corporateAddress: "Akdeniz Mahallesi, Şehit Fethibey Caddesi, Heris Tower, No: 55, İç Kapı No: 091, 35210 Konak / İzmir, Türkiye",
   websiteUrl: "https://doneventures.co",
-  linkedinUrl: "",
+  linkedinUrl: "https://www.linkedin.com/company/doneventures-co/",
   founderPhotoUrl: "/assets/babak-gozen-founder-v4.jpg", // 640 × 800; original PNG preserved
 });
